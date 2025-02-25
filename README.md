@@ -2,6 +2,8 @@
 
 > A Tkinter-based desktop app that uses OpenAI to analyze news articles, providing a confidence score and detailed reasoning on their credibility.
 
+![Fake News Detector](https://github.com/ecdedios/fake-news-detector-gui/blob/main/images/Screenshot%202025-02-24%20223051.png)
+
 ## Usage
 
 Some technologies used:
