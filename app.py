@@ -57,7 +57,7 @@ api_key_entry.pack(pady=5)
 tk.Label(root, text="Enter a News Headline or Article:", font=("Arial", 12)).pack(pady=5)
 
 # Text Area
-text_area = scrolledtext.ScrolledText(root, height=5, width=70)
+text_area = scrolledtext.ScrolledText(root, height=5, width=70, wrap=tk.WORD)
 text_area.pack(pady=5)
 
 # Analyze Button
@@ -68,7 +68,7 @@ output_label = tk.Label(root, text="", font=("Arial", 12, "bold"))
 output_label.pack()
 
 # Output Text Area
-output_text = scrolledtext.ScrolledText(root, height=7, width=70)
+output_text = scrolledtext.ScrolledText(root, height=7, width=70, wrap=tk.WORD)
 output_text.pack(pady=5)
 
 root.mainloop()
