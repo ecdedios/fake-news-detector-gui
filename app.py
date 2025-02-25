@@ -16,15 +16,15 @@ def analyze_news():
         return
     
     try:
-        openai.api_key = api_key  # Use user-provided API key
-        response = openai.ChatCompletion.create(
+        client = openai.OpenAI(api_key=api_key)  # Initialize OpenAI client
+        response = client.chat.completions.create(
             model="gpt-4",
             messages=[
                 {"role": "system", "content": "You are an expert fact-checker. Analyze the following text and determine if it sounds credible or suspicious. Provide reasoning, a confidence score from 0 to 100, and supporting details."},
                 {"role": "user", "content": news_text}
             ]
         )
-        result = response["choices"][0]["message"]["content"]
+        result = response.choices[0].message.content
         
         # Extract confidence score and breakdown
         try:
